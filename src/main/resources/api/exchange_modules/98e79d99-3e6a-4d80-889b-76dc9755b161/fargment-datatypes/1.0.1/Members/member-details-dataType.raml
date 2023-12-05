@@ -1,0 +1,87 @@
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  firstName:
+    required: true
+    type: string
+    example: "prudvi"
+  lastName:
+    required: true
+    type: string
+    example: "raj"
+  maritalStatus:
+    required: false
+    type: string
+    enum:
+      - Married
+      - Unmarried
+    example: "Unmarried"
+  title:
+    required: true
+    type: string
+    example: "Mr"
+  gender:
+    required: true
+    type: string
+    enum:
+      - Male
+      - Female
+      - Transgender
+    example: "Female"
+  occupation:
+    required: false
+    type: string
+    example: "Engineer"              
+  registrationChannel:
+    required: true
+    type: string
+    example: "WFC-MP"
+  preferredName:
+    required: false
+    type: string
+    example: "NAV"
+  identity:
+    required: false
+    type: object
+    properties:
+      password:
+        required: true
+        type: string
+        example: "testing"
+      phoneCountry:
+        required: true
+        type: string
+        example: "91"
+      phoneNumber:
+        required: true
+        type: string
+        example: "9087653421"
+      email:
+        type: string
+        required: true
+        example: "emailNaveen001@email.com"
+  address:
+    required: true
+    type: object
+    properties:
+      country:
+        type: string
+        required: true
+        example: "Hon"
+      city:
+        type: string
+        required: true
+        example: "Hongkong"
+      area:
+        type: string
+        required: true
+        example: "CentralAndWesternDistrict"
+      province:
+        type: string
+        required: true
+        example: "HongKongIsland"
+      placeOfResidence:
+        type: string
+        required: true
+        example: "12/3 Kamaraj Street"
